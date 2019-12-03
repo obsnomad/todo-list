@@ -1,0 +1,49 @@
+.Item {
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 5px;
+
+  .Input {
+    flex-grow: 1;
+    border: 0;
+    background: transparent;
+    min-width: 0;
+  }
+
+  & + & {
+    border-top: none;
+  }
+
+  .Button {
+    border: none;
+    background: grey;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 5px;
+
+    &Update {
+      background-color: cadetblue;
+    }
+
+    &Switch {
+      background-color: green;
+    }
+
+    &Remove {
+      background-color: red;
+    }
+  }
+
+  &Complete {
+    .Input {
+      text-decoration: line-through;
+      color: grey;
+    }
+
+    .ButtonSwitch {
+      background-color: grey;
+    }
+  }
+}
